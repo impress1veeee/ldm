@@ -1,0 +1,116 @@
+$main-color: #1e1e1e;
+$accent-color: #be9559;
+$text-color: #FFFFFF;
+$hover-color: #dfb981;
+$background-color:#181818;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'TTCommons';
+    src: url(../assets/TTCommons-DemiBold.ttf)format('truetype');
+    font-style: demibold;
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'TTCommons';
+    src: url(../assets/TTCommons-Light.ttf)format('truetype');
+    font-weight: 300;
+    font-style: light;
+}
+
+.background-container{
+    background-image: url(../assets/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height:100vh;
+}
+
+.title{
+    h1{
+        margin-left:80px;
+        font-family: 'TTCommons';
+        font-style: demibold;
+        font-size: clamp(20px,5vw,120px);
+        color: #FFFFFF;
+    }
+}
+.about-container{
+    background-color: $background-color;
+    display:flex;
+    flex-direction: column;
+    gap:80px;
+    padding:80px;
+    .btn{
+        display: inline-block;
+        background-color:$accent-color;
+        color:$text-color;
+        border: none;
+        border-radius: 0;
+        padding: 12px 24px;
+        font-family: 'TTCommons';
+        font-style:light;
+        cursor: pointer;
+        &:hover{
+            background-color: $hover-color;
+        }
+    }
+    h2{
+        font-family: 'TTCommons';
+        font-style: demibold;
+        font-size: clamp(40px,5vw,120px);
+        color: #FFFFFF;
+    }
+    p{
+        font-family: 'TTCommons';
+        font-style: light;
+        color:#FFFFFF;
+        font-size: clamp(20px,2vw,60px);
+    }
+    .row{
+        display:flex;
+        gap:20px;
+        .column-left{
+            background-color: $background-color;
+            flex:1;
+        }
+        .column-right{
+            h2{
+                text-align: right;
+            }
+            p{
+                text-align: right;
+            }
+            background-color: $background-color;
+            flex:1;
+        }
+    }
+    img{
+        width:100%;
+        height:100%;
+        overflow: hidden;
+        object-fit: cover;
+        display: block;
+    }
+    @media (max-width:768px) {
+        gap:40px;
+        padding:40px;
+        .row{
+            flex-direction: column;
+        }
+    }
+}
+
+.footer-container{
+    background-color: #1e1e1e;
+}
+
