@@ -4,6 +4,25 @@ html
         meta(charset="UTF-8")
         title ЖК "ЛДМ"
         link(rel="stylesheet",href="/styles/style.css")
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+        .header-container
+                .row-align-items-right
+                    .d-flex.justify-content-between.trees 
+                        a.logo(href="index.html")
+                            img(src="/assets/logo.png",height="40")
+                        nav.trees 
+                            ul.nav 
+                                li.nav-item 
+                                    a.nav-link.text-white(href="#") О комплексе
+                                li.nav-item 
+                                    a.nav-link.text-white(href="#") Квартиры
+                                li.nav-item 
+                                    a.nav-link.text-white(href="#") Галерея
+                                li.nav-item 
+                                    a.nav-link.text-white(href="#") Документы
+                                li.nav-item 
+                                    a.nav-link.text-white(href="contacts.html") Контакты
     body
         .background-container
             .title
@@ -13,17 +32,30 @@ html
                 .column-left 
                     h2 О проекте
                     p 
-                        |Вершина премиальной жизни в Петербурге.'\n\n'
+                        |Вершина премиальной жизни в Петербурге.
                         |ЛДМ - эксклюзивный проект премиум-класса, который реализуется на Аптекарском острове Петроградской стороны в окружении знаковых мест отдыха, культуры и образования.'\n'
                         |Комплекс состоит из 7 многоквартирных корпусов высотой 9-10 этажей, сити-вилл, коммерческих и общественных пространств.
                     button.btn Скачать презентацию
                 .column-right
-                    img(src="/assets/about1.png",alt="A")
+                    .image
+                        img(src="/assets/about1.png")
             .row
                 .column-left 
-                    p Фото
+                    img(src="/assets/about2.png")
                 .column-right 
                     h2 Квартирография
+                    p 
+                        |Эксклюзивная коллекция квартир. Многообразие
+                        |форматов и планировочных решений.
+                        |
+                        |Широкий выбор комнатности и площадей: 
+                        |от 1-комнатных 41,9 м2 до 5-комнатных квартир 173,9 м2. Проектом предусмотрены лоты с видом на
+                        |Малую Невку, Крестовский остров и живописную
+                        |панораму исторического района, видовые
+                        |квартиры с угловым остеклением, увеличенными и
+                        |панорамными окнами, а также с домашним
+                        |кинотеатром и мини-спортзалом.
+                    button.btn Скачать презентацию
             .row 
                 .column-left 
                     h2 Остались вопросы?

@@ -1,0 +1,41 @@
+doctype html 
+html 
+    head
+        meta(charset="UTF-8")
+        title ЖК "ЛДМ"
+        link(rel="stylesheet",href="/styles/style.css")
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+        .header-container 
+            .row-align-items-right
+                .d-flex.justify-content-between 
+                    a.logo(href="index.html")
+                        img(src="/assets/logo.png",height="40")
+                    nav 
+                        ul.nav 
+                            li.nav-item 
+                                a.nav-link.text-white(href="index.html") О комплексе
+                            li.nav-item 
+                                a.nav-link.text-white(href="#") Квартиры
+                            li.nav-item 
+                                a.nav-link.text-white(href="#") Галерея
+                            li.nav-item 
+                                a.nav-link.text-white(href="#") Документы
+                            li.nav-item 
+                                a.nav-link.text-white(href="contacts.html") Контакты
+    body
+        .body-container
+            .container
+                .row 
+                    .col-xl-3.col-12.text-start
+                        h2 Контакты
+                        p Застройщик
+                        p АО "ГК "Эталон"
+                        p Богатырский пр., 3, корп.3 
+                        p +7 (777) 777-77-77
+                    .col-xl-9.col-12.text-end
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A72929069d16aeca5d10a1dd752570165bf1e821dcbc3b77f39f48d914698a911&amp;width=879&amp;height=685&amp;lang=ru_RU&amp;scroll=true"></script>
+                
+    footer 
+        .footer-container 
+            p Footer
