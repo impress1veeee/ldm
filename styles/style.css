@@ -49,7 +49,7 @@ html, body {
 }
 
 .bg-cover {
-  background-image: url(../assets/background.png);
+  background-image: url("../assets/background.png");
   background-size: cover;
   background-position: center;
   width: 100vw;
