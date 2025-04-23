@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "TTCommons";
+  src: url(../assets/TTCommons-DemiBold.ttf) format("truetype");
+  font-style: demibold !important;
+  font-weight: 700 !important;
+}
+@font-face {
+  font-family: "TTCommons";
+  src: url(../assets/TTCommons-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: light;
+}
+@font-face {
+  font-family: "TTCommons";
+  src: url(../assets/TTCommons-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: medium;
+}/*# sourceMappingURL=fonts.css.map */

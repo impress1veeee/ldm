@@ -3,6 +3,7 @@ $accent-color: #be9559;
 $text-color: #FFFFFF;
 $hover-color: #dfb981;
 $background-color:#181818;
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css);
 *{
     margin: 0;
     padding: 0;
@@ -12,40 +13,6 @@ $background-color:#181818;
 html, body{
     overflow-x: hidden;
 }
-.body-container{
-    background-color: $background-color;
-    h2{
-        font-family: 'TTCommons';
-        font-style: demibold;
-        font-size: clamp(40px,5vw,120px);
-        color: #FFFFFF;
-    }
-    p{
-        font-family: 'TTCommons';
-        font-style: light;
-        color:#FFFFFF;
-        font-size: clamp(20px,2vw,60px);
-    }
-}
-@font-face {
-    font-family: 'TTCommons';
-    src: url(../assets/TTCommons-DemiBold.ttf)format('truetype');
-    font-style: demibold !important;
-    font-weight: 700 !important;
-}
-@font-face {
-    font-family: 'TTCommons';
-    src: url(../assets/TTCommons-Light.ttf)format('truetype');
-    font-weight: 300;
-    font-style: light;
-}
-
-@font-face {
-    font-family: 'TTCommons';
-    src: url(../assets/TTCommons-Medium.ttf)format('truetype');
-    font-weight: 500;
-    font-style: medium;
-}
 .background-container{
     background-image: url(../assets/background.png);
     background-size: cover;
@@ -54,106 +21,20 @@ html, body{
     width: 100vw;
     height:100vh;
 }
-
-.title{
-    h1{
-        margin-left:80px;
-        font-family: 'TTCommons';
-        font-style: demibold;
-        font-size: clamp(20px,5vw,120px);
-        color: #FFFFFF;
-    }
-}
-.container{
-    background-color: $background-color;
-    h2{
-        font-family: 'TTCommons';
-        font-style: demibold;
-        font-size: clamp(40px,5vw,120px);
-        color: #FFFFFF;
-    }
-    p{
-        font-family: 'TTCommons';
-        font-style: light;
-        font-weight:300;
-        color:#FFFFFF;
-        font-size: clamp(20px,2vw,40px);
-    }
-}
-.about-container{
-    background-color: $background-color;
-    display:flex !important;
-    flex-direction: column !important;
-    gap:80px;
-    padding:80px;
-    .btn{
-        display: block;
-        background-color:$accent-color;
-        color:$text-color;
-        font-family: 'TTCommons';
-        font-style:light;
-        cursor: pointer;
-        &:hover{
-            background-color: $hover-color;
-        }
-    }
-    h2{
-        font-family: 'TTCommons';
-        font-style: demibold;
-        font-size: clamp(40px,5vw,120px);
-        color: #FFFFFF;
-    }
-    p{
-        font-family: 'TTCommons';
-        font-style: light;
-        color:#FFFFFF;
-        font-size: clamp(20px,2vw,60px);
-    }
-    .cont-row{
-        display:flex ;
-        gap:20px;
-        .column-left{
-            background-color: $background-color;
-            flex:1;
-        }
-        .column-right{
-            justify-content: center;
-            h2{
-                text-align: right;
-            }
-            p{
-                text-align: right;
-            }
-            background-color: $background-color;
-        }
-    }
-    .image{
-        width:100px;
-        height:50px;
-        overflow: hidden;
-        object-fit: cover;
-        display: block;
-    }
-    @media (max-width:768px) {
-        gap:40px;
-        padding:40px;
-        .row{
-            flex-direction: column;
-        }
-    }
-}
-
 .footer-container{
     background-color: #1e1e1e;
+    font-family: 'TTCommons';
+    font-weight: 500;
+    color:$text-color
 }
 .header-container{
-    background-color: $background-color;
+    background-color: transparent;
     top: 0;
     left: 0;
     width: 100%;
     .trees{
         margin-left: 3vw;
-        margin-right: 10vw;
+        margin-right: 6vw;
     }
     .logo{
         margin: 2.083vw;
@@ -167,4 +48,38 @@ html, body{
           color: $hover-color;
         }
     }
+}
+.bg-cover{
+    background-image: url(../assets/background.png);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    min-height: 5vh;
+    height:100vh;
+    margin:0;
+    padding:0;
+}
+.row{
+    background-color: $background-color !important;
+    .text-container{
+        padding: 40px; 
+    }
+    h2{
+        font-family: 'TTCommons';
+        font-weight: 500;
+        font-size: clamp(36px, 5vw, 72px);
+        color:$text-color;
+    }
+    p{
+        font-family: 'TTCommons';
+        font-weight: 300;
+        font-size: clamp(18px, 2.5vw, 36px);
+        line-height: 1.5em;
+        color:$text-color;
+    }
+}
+.btn-primary{
+    background-color:$accent-color !important;
+    border-color: $accent-color !important;
+    font-size: clamp(18px, 2.5vw, 36px);
 }
