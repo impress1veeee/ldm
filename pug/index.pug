@@ -7,32 +7,30 @@ html
         link(rel="stylesheet",href="../styles/fonts.css")
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         
-        //.header-container
-                .row-align-items-right
-                    .d-flex.justify-content-between.trees 
-                        a.logo(href="index.html")
+        .container-fluid.header-container.trees
+            .row.d-flex.align-items-center.py-4
+                .col-xl-3.d-flex.align-items-center
+                    a.logo.mx-5(href="#")
                             img(src="/assets/logo.png",height="40")
-                        nav.trees 
-                            ul.nav 
-                                li.nav-item 
-                                    a.nav-link.text-white(href="#") О комплексе
-                                li.nav-item 
-                                    a.nav-link.text-white(href="#") Квартиры
-                                li.nav-item 
-                                    a.nav-link.text-white(href="#") Галерея
-                                li.nav-item 
-                                    a.nav-link.text-white(href="#") Документы
-                                li.nav-item 
-                                    a.nav-link.text-white(href="contacts.html") Контакты
+                .col-xl-9
+                    .row.px-5.d-flex.align-items-center
+                        .col-xl.d-flex.justify-content-center
+                            a.nav-link.text-white(href="#") О комплексе
+                        .col-xl.d-flex.justify-content-center
+                            a.nav-link.text-white(href="#") Квартиры
+                        .col-xl.d-flex.justify-content-center
+                            a.nav-link.text-white(href="#") Галерея
+                        .col-xl.d-flex.justify-content-center
+                            a.nav-link.text-white(href="#") Документы
+                        .col-xl.d-flex.justify-content-center
+                            a.nav-link.text-white(href="../pug/contacts.html") Контакты
     body
         .body-container
-            //.background-container
-                .title
-                    h1 ЖК "ЛДМ"
             .container-fluid 
                 .row 
-                    .col-12.bg-cover 
-                        h1 ЖК "ЛДМ"
+                    .col-12.bg-cover.text-center
+                        h1 Жилой комплекс «ЛДМ»
+                        h3 Вершина премиальной жизни
                 .row 
                     .col-xl-6
                         .text-container
@@ -41,7 +39,7 @@ html
                             p ЛДМ - эксклюзивный проект премиум-класса, который реализуется на Аптекарском острове Петроградской стороны в окружении знаковых мест отдыха, культуры и образования.
                             P Комплекс состоит из 7 многоквартирных корпусов высотой 9-10 этажей, сити-вилл, коммерческих и общественных пространств.
                             .d-flex.justify-content-center
-                                button.btn.btn-primary Скачать презентацию
+                                button.btn.btn-primary.btn-lg Скачать презентацию
                     .col-xl-6.text-end
                         .text-container
                             img.img-fluid(src="../assets/about1.png")
@@ -53,18 +51,26 @@ html
                         .text-container 
                             h2 Квартирография
                             p Эксклюзивная коллекция квартир. Многообразие форматов и планировочных решений.
-                            p Широкий выбор комнатности и площадей: от 1-комнатных 41,9 м2 до 5-комнатных квартир 173,9 м2. Проектом предусмотрены лоты с видом на Малую Невку, Крестовский остров и живописную панораму исторического района, видовые квартиры с угловым остеклением, увеличенными и панорамными окнами, а также с домашним кинотеатром и мини-спортзалом.
-                            .d-flex.justify-content-center
-                                button.btn.btn-primary Выбрать квартиру
+                            p Широкий выбор комнатности и площадей: от 1-комнатных 41,9 м<sup>2</sup> до 5-комнатных квартир 173,9 м<sup>2</sup>. Проектом предусмотрены лоты с видом на Малую Невку, Крестовский остров и живописную панораму исторического района, видовые квартиры с угловым остеклением, увеличенными и панорамными окнами, а также с домашним кинотеатром и мини-спортзалом.
+                            .d-flex.justify-content-center.mt-5
+                                button.btn.btn-primary.btn-lg Выбрать квартиру
                 .row 
                     .col-xl-6
                         .text-container
                             h2 Остались вопросы?
+                            form
+                                .mb-3
+                                    label.form-label(for="name") Имя
+                                    input#name.form-control(type="text" placeholder="Ваше имя")
+                                .mb-3
+                                    label.form-label(for="number") Номер телефона
+                                    input#number.form-control(type="text" placeholder="+7")
+                                .mb-3
+                                    label.form-label(for="email") Электронный адрес
+                                    input#email.form-control(type="text" placeholder="address@mail.com")
                             .d-flex.justify-content-center
-                                button.btn.btn-primary Скачать презентацию
+                                button.btn.btn-primary.btn-lg Оставить заявку
                     .col-xl-6.text-end
                         .text-container
                             img.img-fluid(src="../assets/about1.png")
-    footer 
-        .footer-container 
-            p Footer
+    include ../pug/footer.pug
