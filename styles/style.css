@@ -1,6 +1,6 @@
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css);
 html, body, head {
-  background-color: #181818;
+  background-color: #181818 !important;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@ html, body, head {
 }
 
 .header-container {
-  background-color: #181818;
+  background-color: #131313;
   left: 0;
 }
 .header-container.trees {
@@ -22,10 +22,41 @@ html, body, head {
 }
 
 .body-container .row {
-  background-color: #181818 !important;
+  background-color: transparent !important;
 }
 .body-container .row .text-container, .body-container .row .map-container {
   padding: 40px;
+}
+.body-container .row .dom-approved {
+  background-color: #e1f6d9 !important;
+  border-radius: 10px;
+  width: 27vw;
+}
+.body-container .row .dom-approved p {
+  color: black !important;
+  font-family: "TTCommons";
+  font-weight: 500 !important;
+  font-size: clamp(18px, 2vw, 32px) !important;
+  line-height: 1em;
+  color: #FFFFFF;
+}
+.body-container .row .dom-approved .domlogo {
+  background-color: #97c355;
+  border-radius: 5px;
+}
+.body-container .row .contacts h3 {
+  font-family: "TTCommons";
+  font-weight: 500;
+  font-size: clamp(18px, 2vw, 72px);
+  line-height: 1.3em;
+  color: #FFFFFF;
+}
+.body-container .row .contacts p {
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: clamp(18px, 2vw, 24px) !important;
+  line-height: 1em;
+  color: #FFFFFF;
 }
 .body-container .row h2 {
   font-family: "TTCommons";
@@ -36,7 +67,7 @@ html, body, head {
 .body-container .row p {
   font-family: "TTCommons";
   font-weight: 300;
-  font-size: clamp(18px, 2vw, 72px);
+  font-size: clamp(18px, 2vw, 72px) !important;
   line-height: 1.3em;
   color: #FFFFFF;
 }
