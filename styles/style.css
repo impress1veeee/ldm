@@ -1,4 +1,35 @@
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css);
+@font-face {
+  font-family: "TTCommons";
+  src: url("../assets/TTCommons-DemiBold.ttf") format("truetype");
+  font-style: demibold !important;
+  font-weight: 700 !important;
+}
+@font-face {
+  font-family: "TTCommons";
+  src: url("../assets/TTCommons-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: light;
+}
+@font-face {
+  font-family: "TTCommons";
+  src: url("../assets/TTCommons-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: medium;
+}
+@font-face {
+  font-family: "Destina";
+  src: url("../assets/Destina.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Actinia";
+  src: url("../assets/Actinia-Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "TikTok-Sans";
+  src: url("../assets/TikTokSans-VF-v3.3.ttf") format("truetype");
+  font-weight: 300;
+}
 html, body, head {
   background-color: #181818 !important;
   overflow-x: hidden;
@@ -10,12 +41,15 @@ html, body, head {
 .header-container {
   background-color: #131313;
   left: 0;
+  position: relative;
+  z-index: 5;
 }
 .header-container.trees {
   background-color: rgba(0, 0, 0, 0.2509803922);
   position: fixed;
 }
 .header-container a {
+  position: relative;
   font-family: "TikTok-Sans" !important;
   font-size: clamp(18px, 2vw, 24px) !important;
   font-weight: 300;
@@ -58,6 +92,21 @@ html, body, head {
   line-height: 1em;
   color: #FFFFFF;
 }
+.body-container .row .contact-form label {
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: clamp(18px, 2vw, 72px) !important;
+  line-height: 1.3em;
+  color: #FFFFFF;
+}
+.body-container .row .contact-form .form-control {
+  background-color: #363636;
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: clamp(18px, 2vw, 56px) !important;
+  line-height: 1.3em;
+  color: #FFFFFF;
+}
 .body-container .row h2 {
   font-family: "TTCommons";
   font-weight: 500;
@@ -70,6 +119,9 @@ html, body, head {
   font-size: clamp(18px, 2vw, 72px) !important;
   line-height: 1.3em;
   color: #FFFFFF;
+}
+.body-container .img-fluid {
+  size: 100% !important;
 }
 .body-container .bg-cover {
   background-image: url("../assets/background.png");
