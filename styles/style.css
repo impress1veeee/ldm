@@ -1,33 +1,33 @@
 @import url(https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css);
 @font-face {
   font-family: "TTCommons";
-  src: url("../assets/TTCommons-DemiBold.ttf") format("truetype");
+  src: url("../assets/fonts/TTCommons-DemiBold.ttf") format("truetype");
   font-style: demibold !important;
   font-weight: 700 !important;
 }
 @font-face {
   font-family: "TTCommons";
-  src: url("../assets/TTCommons-Light.ttf") format("truetype");
+  src: url("../assets/fonts/TTCommons-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: light;
 }
 @font-face {
   font-family: "TTCommons";
-  src: url("../assets/TTCommons-Medium.ttf") format("truetype");
+  src: url("../assets/fonts/TTCommons-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: medium;
 }
 @font-face {
   font-family: "Destina";
-  src: url("../assets/Destina.ttf") format("truetype");
+  src: url("../assets/fonts/Destina.ttf") format("truetype");
 }
 @font-face {
   font-family: "Actinia";
-  src: url("../assets/Actinia-Regular.otf") format("truetype");
+  src: url("../assets/fonts/Actinia-Regular.otf") format("truetype");
 }
 @font-face {
   font-family: "TikTok-Sans";
-  src: url("../assets/TikTokSans-VF-v3.3.ttf") format("truetype");
+  src: url("../assets/fonts/TikTokSans-VF-v3.3.ttf") format("truetype");
   font-weight: 300;
 }
 html, body, head {
@@ -36,6 +36,15 @@ html, body, head {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  background-color: #181818;
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dbae6a;
 }
 
 .header-container {
@@ -55,11 +64,212 @@ html, body, head {
   font-weight: 300;
 }
 
+.body-container h1 {
+  font-family: "Actinia";
+  position: relative;
+  color: #FFFFFF;
+  font-size: clamp(60px, 8vw, 140px);
+  letter-spacing: -0.05em;
+  margin-top: 72vh;
+  z-index: 3;
+}
+.body-container h2 {
+  font-family: "TTCommons";
+  font-weight: 500;
+  font-size: 100px;
+  color: #FFFFFF;
+}
+.body-container h3 {
+  font-family: "Destina";
+  position: relative;
+  color: #dbae6a;
+  font-size: clamp(36px, 8vw, 100px);
+  margin-top: -8vh;
+  z-index: 1;
+}
+.body-container h3.photo-sign {
+  text-align: right;
+  padding-right: 6vw;
+  margin-top: -25vh;
+}
+@media (min-width: 1200px) {
+  .body-container h3.photo-sign {
+    padding-right: 8vw;
+    margin-top: -100vh;
+  }
+}
+.body-container p {
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 54px;
+  line-height: 1.3em;
+  color: #FFFFFF;
+}
+@media (min-width: 1200px) {
+  .body-container p {
+    font-size: clamp(42px, 2.2vw, 72px);
+  }
+}
+.body-container p.contact-section, .body-container p.document-name, .body-container p.flat-parameter {
+  font-family: "TTCommons";
+  font-weight: 500 !important;
+  font-size: 54px;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+@media (min-width: 1200px) {
+  .body-container p.contact-section, .body-container p.document-name, .body-container p.flat-parameter {
+    font-size: clamp(42px, 2.2vw, 72px);
+  }
+}
+.body-container p.contact-info, .body-container p.document-desc, .body-container p.flat-smaller {
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 1em !important;
+  color: #FFFFFF;
+}
+@media (min-width: 1200px) {
+  .body-container p.contact-info, .body-container p.document-desc, .body-container p.flat-smaller {
+    font-size: clamp(24px, 1.25vw, 48px);
+  }
+}
+.body-container p.flat-info {
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 1em !important;
+  color: #FFFFFF;
+}
+@media (min-width: 1200px) {
+  .body-container p.flat-info {
+    font-size: clamp(28px, 1.45vw, 56px);
+  }
+}
+.body-container img.img-about {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.body-container img.flat-image {
+  filter: invert(1);
+}
+.body-container img.document-save {
+  width: 100%;
+}
+.body-container .contact-form label {
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 54px;
+  line-height: 1.3em;
+  color: #FFFFFF;
+}
+@media (min-width: 1200px) {
+  .body-container .contact-form label {
+    font-size: clamp(42px, 2.2vw, 72px);
+  }
+}
+.body-container .contact-form .form-control {
+  background-color: #363636;
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 54px;
+  line-height: 1.3em;
+  color: #FFFFFF;
+}
+@media (min-width: 1200px) {
+  .body-container .contact-form .form-control {
+    font-size: clamp(42px, 2.2vw, 72px);
+  }
+}
+.body-container .contact-form .form-control:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 0.2rem rgba(219, 174, 106, 0.6666666667) !important;
+}
 .body-container .row {
   background-color: transparent !important;
 }
-.body-container .row .text-container, .body-container .row .map-container {
+.body-container .row .text-container, .body-container .row .map-container, .body-container .row .flat-title {
   padding: 40px;
+}
+.body-container .row .text-container .return, .body-container .row .map-container .return, .body-container .row .flat-title .return {
+  width: 10vw;
+}
+@media (min-width: 1200px) {
+  .body-container .row .text-container .return, .body-container .row .map-container .return, .body-container .row .flat-title .return {
+    width: 3vw;
+  }
+}
+.body-container .row .price {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 45px;
+  border-color: white;
+  border-style: solid;
+  color: white;
+  background-color: #181818;
+  color: #FFFFFF;
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 54px;
+  padding: 10px;
+  width: 250px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+@media (min-width: 1200px) {
+  .body-container .row .price {
+    font-size: clamp(28px, 1.5vw, 28px);
+  }
+}
+.body-container .row .price:hover {
+  border-color: #dbae6a;
+}
+.body-container .row .price:active {
+  border-color: #dbae6a;
+}
+.body-container .row .filters-row {
+  height: 55px !important;
+}
+.body-container .row .filters-row p {
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 54px;
+}
+@media (min-width: 1200px) {
+  .body-container .row .filters-row p {
+    font-size: clamp(28px, 1.5vw, 28px);
+  }
+}
+.body-container .row .filters-row input {
+  padding-left: 25%;
+}
+.body-container .row .filters-row .price {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 45px;
+  border-color: white;
+  border-style: solid;
+  color: white;
+  background-color: #181818;
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 54px;
+  padding: 10px;
+  width: 250px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+@media (min-width: 1200px) {
+  .body-container .row .filters-row .price {
+    font-size: clamp(28px, 1.5vw, 28px);
+  }
+}
+.body-container .row .filters-row .price:hover {
+  border-color: #dbae6a;
+}
+.body-container .row .filters-row .price:active {
+  border-color: #dbae6a;
 }
 .body-container .row .dom-approved {
   background-color: #e1f6d9 !important;
@@ -78,50 +288,103 @@ html, body, head {
   background-color: #97c355;
   border-radius: 5px;
 }
-.body-container .row .contacts h3 {
+.body-container .row .document-main {
+  background-color: #252525 !important;
+}
+.body-container .row .document-button {
+  background-color: #dbae6a !important;
+}
+.body-container .row .contacts .return {
+  width: 3vw;
+}
+.body-container .btn-rooms {
+  background-color: transparent;
+  border-style: solid;
+  color: white;
   font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 54px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 45px;
+  border-color: white;
+  color: #FFFFFF;
+  padding: 10px;
+  width: 150px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+@media (min-width: 1200px) {
+  .body-container .btn-rooms {
+    font-size: clamp(20px, 1.5vw, 20px);
+  }
+}
+.body-container .btn-rooms.more {
+  width: 220px;
+}
+.body-container .btn-rooms.circle {
+  width: 55px;
+  border-radius: 100%;
+}
+.body-container .btn-rooms:hover {
+  border-color: #dbae6a;
+}
+.body-container .btn-rooms:active {
+  background-color: rgba(219, 174, 106, 0.6666666667);
+  border-color: #dbae6a;
+}
+.body-container .btn-rooms.active {
+  background-color: rgba(219, 174, 106, 0.6666666667);
+  border-color: #dbae6a;
+}
+.body-container .flat-card {
+  background-color: #252525;
+  border-radius: 15px;
+  width: 100%;
+}
+.body-container .flat-card .flat-icon {
+  width: 100%;
+}
+.body-container .flat-card .divider {
+  height: 2px;
+  background-color: black;
+  width: 80px;
+}
+.body-container .flat-card h1 {
+  font-family: "TTCommons" !important;
+  font-size: clamp(36px, 2vw, 28px) !important;
   font-weight: 500;
-  font-size: clamp(18px, 2vw, 72px);
+  color: white;
+  letter-spacing: 0.02vw;
+  margin-top: 0;
+}
+.body-container .flat-card p {
+  margin-top: -10px;
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 54px;
   line-height: 1.3em;
   color: #FFFFFF;
 }
-.body-container .row .contacts p {
-  font-family: "TTCommons";
-  font-weight: 300;
-  font-size: clamp(18px, 2vw, 24px) !important;
-  line-height: 1em;
-  color: #FFFFFF;
+@media (min-width: 1200px) {
+  .body-container .flat-card p {
+    font-size: clamp(21px, 2.2vw, 21px);
+  }
 }
-.body-container .row .contact-form label {
-  font-family: "TTCommons";
-  font-weight: 300;
-  font-size: clamp(18px, 2vw, 72px) !important;
-  line-height: 1.3em;
-  color: #FFFFFF;
+.body-container .carousel .carousel-indicators [data-bs-target] {
+  background-color: #dbae6a;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 50%;
+  margin-top: 50px;
 }
-.body-container .row .contact-form .form-control {
-  background-color: #363636;
-  font-family: "TTCommons";
-  font-weight: 300;
-  font-size: clamp(18px, 2vw, 56px) !important;
-  line-height: 1.3em;
-  color: #FFFFFF;
-}
-.body-container .row h2 {
-  font-family: "TTCommons";
-  font-weight: 500;
-  font-size: clamp(36px, 5vw, 144px);
-  color: #FFFFFF;
-}
-.body-container .row p {
-  font-family: "TTCommons";
-  font-weight: 300;
-  font-size: clamp(18px, 2vw, 72px) !important;
-  line-height: 1.3em;
-  color: #FFFFFF;
-}
-.body-container .img-fluid {
-  size: 100% !important;
+@media (min-width: 1200px) {
+  .body-container .carousel .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+  }
 }
 .body-container .bg-cover {
   background-image: url("../assets/background.png");
@@ -132,25 +395,6 @@ html, body, head {
   height: 100vh;
   margin: 0;
   padding: 0;
-}
-.body-container .bg-cover h1 {
-  font-family: "Actinia";
-  position: relative;
-  color: #FFFFFF;
-  font-size: clamp(60px, 8vw, 140px);
-  letter-spacing: -0.05em;
-  margin-top: 72vh;
-  text-shadow: 5px 5px 20px black;
-  z-index: 3;
-}
-.body-container .bg-cover h3 {
-  font-family: "Destina";
-  position: relative;
-  color: #dbae6a;
-  font-size: clamp(36px, 8vw, 100px);
-  margin-top: -8vh;
-  text-shadow: 5px 5px 20px black;
-  z-index: 1;
 }
 
 .footer-container {
@@ -178,7 +422,21 @@ html, body, head {
 .btn-primary {
   font-family: "TikTok-Sans";
   background-color: #dbae6a !important;
-  border-color: #dbae6a !important;
+  border-color: transparent !important;
+  border-radius: 20px !important;
   font-family: "TikTok-Sans" !important;
-  font-size: clamp(18px, 2vw, 72px) !important;
+  font-size: 64px !important;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+@media (min-width: 1200px) {
+  .btn-primary {
+    font-size: clamp(36px, 1.875vw, 72px) !important;
+  }
+}
+.btn-primary:hover {
+  background-color: #dfb981 !important;
+}
+.btn-primary:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 0.2rem rgba(219, 174, 106, 0.6666666667) !important;
 }/*# sourceMappingURL=style.css.map */
