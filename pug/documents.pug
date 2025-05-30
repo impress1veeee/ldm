@@ -1,3 +1,14 @@
+
+- var documents = []
+- documents.push({ name: 'Разрешение на строительство', date: '01.01.1970', time: '00:00', link: '../files/doc1.pdf' })
+- documents.push({ name: 'Проектная декларация (В соответствии с 214-ФЗ)', date: '01.01.1970', time: '00:00', link: '../files/doc1.pdf' })
+- documents.push({ name: 'Выписка из ЕГРН на земельный участок', date: '01.01.1970', time: '00:00', link: '../files/doc1.pdf' })
+- documents.push({ name: 'Заключение государственной экспертизы', date: '01.01.1970', time: '00:00', link: '../files/doc1.pdf' })
+- documents.push({ name: 'Регистрация в ЕГРЮЛ', date: '01.01.1970', time: '00:00', link: '../files/doc1.pdf' })
+- documents.push({ name: 'Образец ДДУ', date: '01.01.1970', time: '00:00', link: '../files/doc1.pdf' })
+- documents.push({ name: 'Генеральный план жилого комплекса', date: '01.01.1970', time: '00:00', link: '../files/doc1.pdf' })
+- documents.push({ name: 'Поэтажные планы жилых помещений', date: '01.01.1970', time: '00:00', link: '../files/doc1.pdf' })
+- documents.push({ name: 'План благоустройства придомовой территории', date: '01.01.1970', time: '00:00', link: '../files/doc1.pdf' })
 doctype html 
 html 
     head
@@ -30,4 +41,18 @@ html
                     .col-xl
                         .text-container
                             h2 Документы
+                            .documents-container.container-fluid 
+                                each doc in documents
+                                    .row.mb-4 
+                                        .col-xl-2
+                                        .col-xl-8.ps-3.document-main
+                                            .row 
+                                                .col-11
+                                                    p.document-name.mt-2= doc.name
+                                                    p.document-desc Загружено #{doc.date} в #{doc.time}
+                                                .col-1.d-flex.align-items-center.document-button.pt-2
+                                                    a(href=doc.link)
+                                                        img.document-save.img-fluid.pb-3(src="../assets/icons/icon_back.svg")
+                                        .col-xl-2
+
     include ../pug/footer.pug

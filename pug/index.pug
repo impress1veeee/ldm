@@ -27,25 +27,26 @@ html
         .body-container
             .container-fluid 
                 .row 
-                    .col-12.bg-cover.text-center
+                    .col-xl-12.bg-cover.text-center
                         h1 Жилой комплекс «ЛДМ»
                         h3 Вершина премиальной жизни
                 .row 
                     .col-xl-6
                         .text-container
-                            h2 Документы
+                            h2 О комплексе
                             p Вершина премиальной жизни в Петербурге.
                             p ЛДМ - эксклюзивный проект премиум-класса, который реализуется на Аптекарском острове Петроградской стороны в окружении знаковых мест отдыха, культуры и образования.
                             P Комплекс состоит из 7 многоквартирных корпусов высотой 9-10 этажей, сити-вилл, коммерческих и общественных пространств.
                             .d-flex.justify-content-center
-                                button.btn.btn-primary.btn-lg Скачать презентацию
+                                button.btn-action.mb-3.center Подробнее
+                                //button.btn.btn-primary.btn-lg Скачать презентацию
                     .col-xl-6.text-end
                         .text-container
-                            img.img-fluid(src="../assets/about1.png")
+                            img.img-about.img-fluid(src="../assets/about1.png")
                 .row 
                     .col-xl-6.order-2.order-xl-1
                         .text-container 
-                            img.img-fluid(src="../assets/about2.png")
+                            img.img-fluid.img-about(src="../assets/about2.png")
                     .col-xl-6.text-end.order-1.order-xl-2 
                         .text-container 
                             h2 Квартирография
@@ -69,7 +70,7 @@ html
                                         label.form-label(for="email") Электронный адрес:
                                         input#email.form-control(type="text" placeholder="address@mail.com")
                                 .d-flex.justify-content-center
-                                    button.btn.btn-primary.btn-lg Оставить заявку
+                                    button.btn-primary.btn-lg Оставить заявку
                     .col-xl-6.text-end
                         .text-container
                             img.img-fluid(src="../assets/about1.png")

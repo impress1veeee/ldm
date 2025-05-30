@@ -3,22 +3,22 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Жилой комплекс "ЛДМ"</title>
+    <title>Квартира | Жилой комплекс "ЛДМ"</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <div class="container-fluid header-container trees">
+    <div class="container-fluid header-container">
         <div class="row d-flex align-items-center py-4">
-            <div class="col-xl-3 d-flex align-items-center"><a class="logo mx-5" href="#"><img src="../assets/logo.png"
-                        height="40" /></a></div>
+            <div class="col-xl-3 d-flex align-items-center"><a class="logo mx-5" href="../pug/index.html"><img
+                        src="../assets/logo.png" height="40" /></a></div>
             <div class="col-xl-9">
                 <div class="row px-5 d-flex align-items-center">
-                    <div class="col-xl d-flex justify-content-center"><a class="nav-link text-white" href="#">О
-                            комплексе</a></div>
+                    <div class="col-xl d-flex justify-content-center"><a class="nav-link text-white"
+                            href="../pug/index.html">О комплексе</a></div>
                     <div class="col-xl d-flex justify-content-center"><a class="nav-link text-white"
                             href="../pug/flatlist.html">Квартиры</a></div>
                     <div class="col-xl d-flex justify-content-center"><a class="nav-link text-white"
-                            href="../pug/gallery.html">Галерея</a></div>
+                            href="#">Галерея</a></div>
                     <div class="col-xl d-flex justify-content-center"><a class="nav-link text-white"
                             href="../pug/documents.html">Документы</a></div>
                     <div class="col-xl d-flex justify-content-center"><a class="nav-link text-white"
@@ -33,53 +33,91 @@
     <div class="body-container">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-12 bg-cover text-center">
-                    <h1>Жилой комплекс «ЛДМ»</h1>
-                    <h3>Вершина премиальной жизни</h3>
+                <div class="flat-title d-flex align-items-center gap-2"><a href="../pug/flatlist.html"><img
+                            class="img-fluid return pb-3" src="../assets/icons/icon_back.svg" /></a>
+                    <h2 id="flat_number"></h2>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="text-container">
-                        <h2>О комплексе</h2>
-                        <p>Вершина премиальной жизни в Петербурге.</p>
-                        <p>ЛДМ - эксклюзивный проект премиум-класса, который реализуется на Аптекарском острове
-                            Петроградской стороны в окружении знаковых мест отдыха, культуры и образования.</p>
-                        <P>Комплекс состоит из 7 многоквартирных корпусов высотой 9-10 этажей, сити-вилл, коммерческих и
-                            общественных пространств.</P>
-                        <div class="d-flex justify-content-center">
-                            <a href="../pug/flatlist.html" class="mb-3 center w-75 more"><button class="btn-rooms w-100" id="btn-book">Скачать презентацию</button></a>
+                <div class="col-xl-6 order-2 order-xl-1 mb-5">
+                    <div class="text-container flats">
+                        <div class="row d-flex align-items-end">
+                            <div class="col-8">
+                                <p class="flat-parameter">Количество комнат: </p>
+                            </div>
+                            <div class="col text-end">
+                                <p class="flat-info" id="flat_rooms"></p>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-end mt-2">
+                            <div class="col">
+                                <p class="flat-parameter">Секция: </p>
+                            </div>
+                            <div class="col text-end">
+                                <p class="flat-info" id="flat_section"></p>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-end mt-2">
+                            <div class="col">
+                                <p class="flat-parameter">Этаж: </p>
+                            </div>
+                            <div class="col text-end">
+                                <p class="flat-info" id="flat_floor"></p>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-end mt-2">
+                            <div class="col">
+                                <p class="flat-parameter">Площадь: </p>
+                            </div>
+                            <div class="col text-end">
+                                <p class="flat-info" id="flat_area"></p>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-end mt-2">
+                            <div class="col">
+                                <p class="flat-parameter">Жилая площадь: </p>
+                            </div>
+                            <div class="col text-end">
+                                <p class="flat-info" id="flat_areaLiving"></p>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-end mt-2">
+                            <div class="col">
+                                <p class="flat-parameter">Площадь кухни: </p>
+                            </div>
+                            <div class="col text-end">
+                                <p class="flat-info" id="flat_areaKitchen"></p>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-end mt-2">
+                            <div class="col-xl-8 col-6">
+                                <p class="flat-parameter">Стоимость при 100% оплате: </p>
+                            </div>
+                            <div class="col text-end">
+                                <p class="flat-info" id="flat_price"></p>
+                            </div>
+                        </div>
+                        <div class="row d-flex align-items-end">
+                            <div class="col"></div>
+                            <div class="col text-end">
+                                <p class="flat-smaller" id="flat_meterPrice"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 text-end">
-                    <div class="text-container"><img class="img-about img-fluid" src="../assets/about1.png" /></div>
+                <div class="col-xl-6 flat-plan order-1 order-xl-2">
+                    <img class="flat-image img-fluid px-5 w-75 ms-5" src="../assets/1.png" id="flat_plan"/>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-6 order-2 order-xl-1">
-                    <div class="text-container"> <img class="img-fluid img-about" src="../assets/about2.png" /></div>
-                </div>
-                <div class="col-xl-6 text-end order-1 order-xl-2">
+                <div class="col d-flex align-items-center">
                     <div class="text-container">
-                        <h2>Квартирография</h2>
-                        <p>Эксклюзивная коллекция квартир. Многообразие форматов и планировочных решений.</p>
-                        <p>Широкий выбор комнатности и площадей: от 1-комнатных 41,9 м<sup>2</sup> до 5-комнатных
-                            квартир 173,9 м<sup>2</sup>. Проектом предусмотрены лоты с видом на Малую Невку, Крестовский
-                            остров и живописную панораму исторического района, видовые квартиры с угловым остеклением,
-                            увеличенными и панорамными окнами, а также с домашним кинотеатром и мини-спортзалом.</p>
-                        <div class="d-flex justify-content-center">
-                            <a href="../pug/flatlist.html" class="mb-3 center w-75 more"><button class="btn-rooms w-100" id="btn-book">Перейти к квартирам</button></a>
-                        </div>
+                        <h2>Забронировать квартиру:</h2>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="text-container">
-                        <h2>Остались вопросы?</h2>
-                        <div class="contact-form">
-                            <div class="contact-form">
+            <div class="row mb-5">
+                <div class="col-xl-3 col-1"></div>
+                <div class="col-xl-6 mb-5 col-10">
+                    <div class="contact-form">
                         <form>
                             <div class="mb-3">
                                 <label class="form-label ps-3" for="name">Имя:</label>
@@ -98,15 +136,12 @@
                             <button class="btn-rooms more mb-3 mt-5 center w-50" id="btn-book">Оставить заявку</button>
                         </div>
                     </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-xl-6 text-end">
-                    <div class="text-container"><img class="img-fluid" src="../assets/about1.png" /></div>
-                </div>
+                <div class="col-xl-3 col-1"></div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 <footer>
     <div class="container-fluid footer-container">
