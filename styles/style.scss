@@ -1,0 +1,514 @@
+$main-color: #1e1e1e;
+$footer-background: #252525;
+$form-background: #363636;
+$placeholder-color: #575757;
+$header-color: #131313;
+$accent-color: #dbae6a;
+$accent-semitransparent: #dbae6aAA;
+$text-color: #FFFFFF;
+$hover-color: #dfb981;
+$background-color:#181818;
+$semiblack-color:#00000040;
+$dom-approved1: #e1f6d9;
+$dom-approved2: #97c355;
+@use 'fonts';
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css);
+html, body, head{
+    background-color: $background-color !important;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    background-color:$background-color;
+    width: 2px;
+}
+::-webkit-scrollbar-thumb{
+    background-color:$accent-color;
+}
+.navbar-toggler-icon{
+    background-color:red;
+    color:red;
+}  
+.header-container{
+    background-color: $header-color;
+    left: 0;
+    position: relative;
+    z-index: 5;
+    &.trees{
+        background-color: $semiblack-color;
+        position:fixed;
+    }
+    a{
+        position: relative;
+        font-family: 'TikTok-Sans' !important;
+        font-size: clamp(18px, 2vw, 24px) !important;
+        font-weight: 300;
+    }
+}
+.body-container{
+    h1{
+        font-family: 'Actinia';
+        position:relative;
+        color:$text-color;
+        font-size: clamp(60px, 8vw, 140px);
+        letter-spacing: -0.05em;
+        margin-top:72vh;
+        z-index: 3;
+        &.mobile-logo{
+            font-size:120px !important;
+            margin-top:67vh;
+            background-color: $semiblack-color;
+        }
+        &.mobile-desc{
+            font-family: 'TTCommons';
+            font-weight: 300;
+            font-size:24px;
+            letter-spacing: 0.5rem;
+            margin-top: -5vh;
+        }
+    }
+    h2{
+        font-family: 'TTCommons';
+        font-weight: 500;
+        font-size: 42px;
+        color:$text-color;
+        @media (min-width: 1200px) {
+            font-size: 100px;
+        }
+        &.questions{
+            font-size:36px !important;
+        }
+    }
+    h3{
+        font-family: 'Destina';
+        position:relative;
+        color:$accent-color;
+        font-size: clamp(36px, 8vw, 100px);
+        margin-top: -8vh;
+        z-index: 1;
+        &.photo-sign{
+            @media (min-width: 1200px) {
+                padding-right:8vw;
+                margin-top:-100vh;
+            }
+            text-align: right;
+            padding-right:6vw;
+            margin-top:-25vh;
+        }
+    }
+    p{
+        font-family: 'TTCommons';
+        font-weight: 300;
+        font-size: 24px;
+        @media (min-width: 1200px) {
+            font-size: clamp(42px, 2.2vw, 72px);
+        }
+        line-height: 1.3em;
+        color:$text-color;
+        &.photo-sign{
+            text-align: center;
+            font-size:20px;
+            margin-top:-2vh;
+        }
+        &.contact-section{
+            font-family: 'TTCommons';
+            font-weight: 500 !important;
+            font-size: 28px;
+            @media (min-width: 1200px) {
+                font-size: clamp(42px, 2.2vw, 72px);
+            }
+            color:$text-color;
+            margin-bottom: 0;
+        }
+        &.flat-parameter{
+            font-family: 'TTCommons';
+            font-weight: 500 !important;
+            font-size: 23px;
+            @media (min-width: 1200px) {
+                font-size: clamp(42px, 2.2vw, 72px);
+            }
+            color:$text-color;
+            margin-bottom: 0;
+        }
+        &.document-name{
+            font-family: 'TTCommons';
+            font-weight: 500 !important;
+            font-size: 18px;
+            @media (min-width: 1200px) {
+                font-size: clamp(42px, 2.2vw, 72px);
+            }
+            color:$text-color;
+            margin-bottom: 0;
+        }
+        &.contact-info{
+            font-family: 'TTCommons';
+            font-weight: 300;
+            font-size: 24px;
+            @media (min-width: 1200px) {
+                font-size: clamp(24px, 1.25vw, 48px);
+            }
+            line-height: 1em !important;
+            color:$text-color;
+        }
+        &.flat-smaller{
+            font-family: 'TTCommons';
+            font-weight: 300;
+            font-size: 16px;
+            @media (min-width: 1200px) {
+                font-size: clamp(24px, 1.25vw, 48px);
+            }
+            line-height: 1em !important;
+            color:$text-color;
+        }
+        &.document-desc{
+            font-family: 'TTCommons';
+            font-weight: 300;
+            font-size: 16px;
+            @media (min-width: 1200px) {
+                font-size: clamp(24px, 1.25vw, 48px);
+            }
+            line-height: 1em !important;
+            color:$text-color;
+        }
+        &.flat-info{
+            font-family: 'TTCommons';
+            font-weight: 300;
+            font-size: 20px;
+            text-align: end;
+            @media (min-width: 1200px) {
+                font-size: clamp(28px, 1.45vw, 56px);
+            }
+            color:$text-color;
+            line-height: 0;
+        }
+    }
+    img{
+        &.img-about{
+            overflow: hidden;
+            object-fit: cover;
+        }
+        &.flat-image{
+            filter: invert(1);
+            @media (min-width: 1200px) {
+                width:70%;
+                height:70%;
+            }
+        }
+        &.flat-preview{
+            filter: invert(1);
+            @media (min-width: 1200px) {
+                width:40%;
+                height:40%;
+            }
+        }
+        &.document-save{
+            width:100%;
+            filter: invert(1);
+        }
+        &.domrf{
+            width: 200%;
+            @media (min-width: 1200px) {
+                width: 40px;
+            }
+        }
+    }
+    .contact-form{
+        label{
+            font-family: 'TTCommons';
+            font-weight: 300;
+            font-size: 24px;
+            @media (min-width: 1200px) {
+                font-size: clamp(42px, 2.2vw, 72px);
+            }
+            line-height: 1.3em;
+            color:$text-color;
+        }
+        .form-control{
+            margin-left:10px;
+            margin-right:10px;
+            border-radius: 45px;
+            border-color:white;
+            border-style:solid;
+            color:white;
+            background-color: $background-color;
+            color:$text-color;
+            font-family: 'TTCommons';
+            font-weight: 300;
+            font-size: 24px;
+            @media (min-width: 1200px) {
+                font-size: clamp(28px, 1.5vw, 28px);
+            }
+            padding: 10px;
+            transition: border-color 0.2s ease, color 0.2s ease;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            &:hover{
+                border-color:$accent-color;
+            }
+            &:focus{
+                border-color:$accent-color;
+                outline: none !important;
+            }
+            line-height: 1.3em;
+            color:$text-color;
+            &::placeholder{
+                color:$placeholder-color;
+            }
+            &:hover{
+                border-color:$accent-color;
+            }
+            &:focus{
+                border-color:transparent;
+                outline: none !important;
+                box-shadow: 0 0 0 0.2rem $accent-semitransparent !important;
+            }
+        }
+    }
+    .row{
+        background-color: transparent !important;
+        .text-container, .map-container, .flat-title{
+            padding: 20px; 
+            @media (min-width: 1200px) {
+                padding: 40px;
+            }
+            .return{
+                width:10vw;
+                @media (min-width: 1200px) {
+                    width:3vw;
+                }
+            }
+        }
+        .image-container{
+            padding:0px;
+            @media (min-width: 1200px) {
+                padding: 40px;
+            }
+        }
+        .filters-row{
+            height:45px !important;
+            margin-bottom:30px;
+            @media (min-width: 1200px) {
+                height:55px !important;
+                margin-bottom:0px;
+            }
+            p{
+                font-family: 'TTCommons';
+                font-weight: 300;
+                font-size: 26px;
+                line-height: 3.5rem;
+                @media (min-width: 1200px) {
+                    font-size: clamp(28px, 1.5vw, 28px);
+                }
+            }
+            input{
+                padding-left:25%;
+            }
+            .price{
+                margin-left:10px;
+                margin-right:10px;
+                border-radius: 45px;
+                border-color:white;
+                border-style:solid;
+                color:white;
+                background-color: $background-color;
+                color:$text-color;
+                font-family: 'TTCommons';
+                font-weight: 300;
+                font-size: 26px;
+                height:55px;
+                width:200px;
+                @media (min-width: 1200px) {
+                    font-size: clamp(28px, 1.5vw, 28px);
+                    width:250px;
+                }
+                padding: 10px;
+                transition: border-color 0.2s ease, color 0.2s ease;
+                transition: background-color 0.2s ease, color 0.2s ease;
+                &:hover{
+                    border-color:$accent-color;
+                }
+                &:focus{
+                    border-color:$accent-color;
+                    outline: none !important;
+                }
+            }
+            .price-mobile{
+                width:200px;
+            }
+        }
+        .document-main{
+            background-color: $footer-background !important;
+        }
+        .document-button{
+            background-color: $accent-color !important;
+        }
+        .contacts {
+            .return{
+                    width:3vw;
+            }
+        }
+    }
+    .btn-rooms{
+        text-decoration: none;
+        background-color:transparent;
+        border-style:solid;
+        color:white;
+        font-family: 'TTCommons';
+        font-weight: 300;
+        font-size: 17px;
+        text-align: center;
+        padding: 10px;
+        width:250px;
+        @media (min-width: 1200px) {
+            font-size: clamp(20px, 1.5vw, 20px);
+            padding: 10px;
+            width:150px;
+        }
+        margin-left:10px;
+        margin-right:10px;
+        border-radius: 45px;
+        border-color:white;
+        color:$text-color;
+        transition: border-color 0.2s ease, color 0.2s ease;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        &.more{
+            width:220px;
+        }
+        &.action{
+            font-size: 18px;
+            width:200px;
+            @media (min-width: 1200px) {
+                font-size: clamp(20px, 1.5vw, 20px);
+                padding: 10px;
+                width:150px;
+            }
+        }
+        &.circle{
+            width:70px;
+            @media (min-width: 1200px) {
+                width:55px;
+            }
+            border-radius: 100%;
+        }
+        &:hover{
+            border-color:$accent-color;
+        }
+        &:active{
+            background-color: $accent-semitransparent;
+            border-color:$accent-color;
+        }
+        &.active{
+            background-color: $accent-semitransparent;
+            border-color:$accent-color;
+        }
+    }
+    .flat-card{
+        background-color: $footer-background;
+        border-radius:15px;
+        width:100%;
+        .flat-icon{
+            width:100%;
+        }
+        .divider{
+            height:2px;
+            background-color: black;
+            width:80px;
+        }
+        h1{
+            font-family: 'TTCommons' !important;
+            font-size: 24px;
+            @media (min-width: 1200px) {
+                font-size: clamp(36px, 2vw, 28px);
+            }
+            font-weight: 500;
+            color:white;
+            letter-spacing:0.02vw;
+            margin-top:0;
+        }
+        p{
+            margin-top:-10px;
+            font-family: 'TTCommons';
+            font-weight: 300;
+            font-size: 24px;
+            @media (min-width: 1200px) {
+                font-size: clamp(21px, 2.2vw, 21px);
+            }
+            line-height: 1.3em;
+            color:$text-color;
+        }
+    }
+    .carousel{
+        .carousel-indicators [data-bs-target] {
+            background-color: $accent-color;
+            width: 25px;
+            height: 25px;
+            margin-left:5px;
+            margin-right:5px;
+            @media (min-width: 1200px) {
+                width: 12px;
+                height: 12px;
+            }
+            border-radius: 50%;
+            margin-top:50px;
+        }
+    }
+    .bg-cover{
+        background-image: url('../assets/background.png');
+        background-size: cover;
+        background-position: center;
+        width: 100vw;
+        min-height: 5vh;
+        height:100vh;
+        margin:0;
+        padding:0;
+    }
+}
+.footer-container{
+    background-color: $footer-background;
+    h1{
+        font-family: 'TTCommons' !important;
+        @media (min-width: 1200px) {
+            font-size: clamp(16px, 2vw, 28px);
+        }
+        font-size: 26px;
+        font-weight: 500;
+        color:white;
+    }
+    p{
+        font-family: 'TikTok-Sans' !important;
+        font-size: clamp(16px, 2vw, 16px) !important;
+        font-weight: 500;
+        color:white;
+    }
+    .footer-link{
+        font-family: 'TikTok-Sans' !important;
+        font-size: clamp(16px, 2vw, 16px) !important;
+        font-weight: 500;
+        color:white;
+    }
+    
+    .socials{
+        filter:invert(1);
+    }
+}
+
+.btn-primary{
+    font-family: 'TikTok-Sans';
+    background-color:$accent-color !important;
+    border-color: transparent !important;
+    border-radius: 20px !important;
+    font-family: 'TikTok-Sans' !important;
+    font-size: 64px !important;
+    @media (min-width: 1200px) {
+        font-size: clamp(36px, 1.875vw, 72px) !important;
+    }
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    &:hover{
+        background-color: $hover-color !important;
+    }
+    &:focus{
+        outline: none !important;
+        box-shadow: 0 0 0 0.2rem $accent-semitransparent !important;
+    }
+}
