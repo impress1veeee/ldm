@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Галерея | Жилой комплекс "ЛДМ"</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container-fluid header-container py-3">
+        <div class="d-flex align-items-center">
+            <div class="col-xl-3 my-xl-3 px-xl-5 d-flex align-items-center"><img
+                    class="mx-md-5 ms-md-0 ms-5 ps-3 w-xl-50" src="../assets/logo.png" height="40" /><button class="navbar-toggler d-md-none ms-3" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                    <img src="../assets/icons/icon_menu.svg" width="25"/>
+                </button></div>
+            <div class="col-xl-9">
+                <div class="d-none d-md-flex gap-4 align-items-center">
+                    <div class="col-xl d-flex justify-content-center"><a class="nav-link text-white"
+                            href="../pug/index.html">О комплексе</a></div>
+                    <div class="col-xl d-flex justify-content-center"><a class="nav-link text-white"
+                            href="../pug/flatlist.html">Квартиры</a></div>
+                    <div class="col-xl d-flex justify-content-center"><a class="nav-link text-white"
+                            href="../pug/gallery.html">Галерея</a></div>
+                    <div class="col-xl d-flex justify-content-center"><a class="nav-link text-white"
+                            href="../pug/documents.html">Документы</a></div>
+                    <div class="col-xl d-flex justify-content-center"><a class="nav-link text-white"
+                            href="../pug/contacts.html">Контакты</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end bg-dark text-white" id="offcanvasMenu">
+        <div class="offcanvas-header mt-2 ms-3 d-flex justify-content-center align-items-center">
+            <h5>ЖК "ЛДМ"</h5><button class="btn-close btn-close-white pe-5" type="button" data-bs-dismiss="offcanvas"
+                aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body ms-3">
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link text-white" href="../pug/index.html">О комплексе</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../pug/flatlist.html">Квартиры</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../pug/gallery.html">Галерея</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../pug/documents.html">Документы</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../pug/contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="body-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl">
+                    <div class="text-container">
+                        <h2>Галерея</h2>
+                        <div class="row mt-lg-5">
+                            <div class="carousel slide mt-lg-5" id="entrancesCarousel" data-bs-ride="carousel">
+                                <div class="carousel-inner mb-lg-3">
+                                    <div class="carousel-item active pb-lg-5">
+                                        <div class="d-flex flex-column align-items-center"><img
+                                                class="img-fluid w-lg-75 mb-4"
+                                                src="../assets/gallery/entrances/entrance1.png" /></div>
+                                    </div>
+                                    <div class="carousel-item pb-lg-5">
+                                        <div class="d-flex flex-column align-items-center"><img
+                                                class="img-fluid w-lg-75 mb-4"
+                                                src="../assets/gallery/entrances/entrance2.png" /></div>
+                                    </div>
+                                    <div class="carousel-item pb-lg-5">
+                                        <div class="d-flex flex-column align-items-center"><img
+                                                class="img-fluid w-lg-75 mb-4"
+                                                src="../assets/gallery/entrances/entrance3.png" /></div>
+                                    </div>
+                                </div>
+                                <div class="carousel-indicators mt-5 ml-5 d-none d-lg-flex">
+                                    <li class="active" data-bs-target="#entrancesCarousel" data-bs-slide-to="0"></li>
+                                    <li data-bs-target="#entrancesCarousel" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#entrancesCarousel" data-bs-slide-to="2"></li>
+                                </div>
+                            </div>
+                            <h3 class="photo-sign d-none d-lg-block">Входные группы</h3>
+                            <p class="photo-sign d-lg-none">Входные группы</p>
+                        </div>
+                        <div class="row mt-lg-5 mt-2">
+                            <div class="carousel slide mt-lg-5" id="interiorCarousel" data-bs-ride="carousel">
+                                <div class="carousel-inner mb-lg-3">
+                                    <div class="carousel-item active pb-lg-5">
+                                        <div class="d-flex flex-column align-items-center"><img
+                                                class="img-fluid w-lg-75 mb-4"
+                                                src="../assets/gallery/interior/interior1.png" /></div>
+                                    </div>
+                                    <div class="carousel-item pb-lg-5">
+                                        <div class="d-flex flex-column align-items-center"><img
+                                                class="img-fluid w-lg-75 mb-4"
+                                                src="../assets/gallery/interior/interior2.png" /></div>
+                                    </div>
+                                    <div class="carousel-item pb-lg-5">
+                                        <div class="d-flex flex-column align-items-center"><img
+                                                class="img-fluid w-lg-75 mb-4"
+                                                src="../assets/gallery/interior/interior3.png" /></div>
+                                    </div>
+                                </div>
+                                <div class="carousel-indicators mt-5 ml-5 d-none d-lg-flex">
+                                    <li class="active" data-bs-target="#interiorCarousel" data-bs-slide-to="0"></li>
+                                    <li data-bs-target="#interiorCarousel" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#interiorCarousel" data-bs-slide-to="2"></li>
+                                </div>
+                            </div>
+                            <h3 class="photo-sign d-none d-lg-block">Интерьеры</h3>
+                            <p class="photo-sign d-lg-none">Интерьеры</p>
+                        </div>
+                        <div class="row mt-lg-5 mt-2">
+                            <div class="carousel slide mt-lg-5" id="exteriorCarousel" data-bs-ride="carousel">
+                                <div class="carousel-inner mb-lg-3">
+                                    <div class="carousel-item active pb-lg-5">
+                                        <div class="d-flex flex-column align-items-center"><img
+                                                class="img-fluid w-lg-75 mb-4"
+                                                src="../assets/gallery/exterior/exterior1.png" /></div>
+                                    </div>
+                                    <div class="carousel-item pb-lg-5">
+                                        <div class="d-flex flex-column align-items-center"><img
+                                                class="img-fluid w-lg-75 mb-4"
+                                                src="../assets/gallery/exterior/exterior2.png" /></div>
+                                    </div>
+                                    <div class="carousel-item pb-lg-5">
+                                        <div class="d-flex flex-column align-items-center"><img
+                                                class="img-fluid w-lg-75 mb-4"
+                                                src="../assets/gallery/exterior/exterior3.png" /></div>
+                                    </div>
+                                </div>
+                                <div class="carousel-indicators mt-5 ml-5 d-none d-lg-flex">
+                                    <li class="active" data-bs-target="#exteriorCarousel" data-bs-slide-to="0"></li>
+                                    <li data-bs-target="#exteriorCarousel" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#exteriorCarousel" data-bs-slide-to="2"></li>
+                                </div>
+                            </div>
+                            <h3 class="photo-sign d-none d-lg-block">Внешнее убранство</h3>
+                            <p class="photo-sign d-lg-none">Внешнее убранство</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<footer>
+    <div class="container-fluid footer-container">
+        <div class="row mx-2 pt-4">
+            <div class="col-xl-3 px-5 mt-3 mb-3">
+                <h1>© Компания, 2025</h1><a class="footer-link text-white" href="#">Персональные
+                    данные</a><br /><br /><a class="footer-link text-white" href="#">Пользовательское
+                    соглашение</a><br /><br /><a class="footer-link text-white" href="#">Противодействие коррупции </a>
+            </div>
+            <div class="col-xl-6 px-5 mt-3 mb-3">
+                <p class="d-none d-lg-block">Разработка веб-сайта выполнена в образовательных целях.</p>
+                <p class="d-none d-lg-block">Все изображения, текстовые описания и иная информация о жилом комплексе,
+                    представленная на сайте, являются результатом работы искусственного интеллекта. Вся информация
+                    вымышленна, любые совпадения с реально случайны.</p>
+                <p class="d-none d-lg-block">Вся информация, представленная на веб-сайте не является публичной офертой,
+                    определяемой положениями статьи 437 ГК РФ.</p>
+                <p class="d-lg-none">Разработано в учебных целях. Вся информация, представленная на веб-сайте не
+                    является публичной офертой, определяемой положениями статьи 437 ГК РФ.</p>
+            </div>
+            <div class="col-xl-3 px-5 mt-lg-3 mb-3">
+                <h1 class="d-none d-lg-block">Контакты</h1>
+                <p class="d-none d-lg-block">Контакт-центр в Санкт-Петербурге:</p>
+                <p class="d-none d-lg-block">+7 (812) 100-00-01</p>
+                <div class="row mt-lg-2">
+                    <div class="d-flex justify-content-start"><a href=""><img class="socials img-fluid w-50"
+                                src="../assets/icons/icon_vk.svg" /></a><a href=""><img class="img-fluid socials w-50"
+                                src="../assets/icons/icon_tg.svg" /></a><a href=""><img class="img-fluid socials w-50"
+                                src="../assets/icons/icon_dzen.svg" /></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
