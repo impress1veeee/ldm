@@ -1,4 +1,4 @@
-@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css);
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css);
 @font-face {
   font-family: "TTCommons";
   src: url("../assets/fonts/TTCommons-DemiBold.ttf") format("truetype");
@@ -47,6 +47,11 @@ html, body, head {
   background-color: #dbae6a;
 }
 
+.navbar-toggler-icon {
+  background-color: red;
+  color: red;
+}
+
 .header-container {
   background-color: #131313;
   left: 0;
@@ -73,11 +78,31 @@ html, body, head {
   margin-top: 72vh;
   z-index: 3;
 }
+.body-container h1.mobile-logo {
+  font-size: 120px !important;
+  margin-top: 67vh;
+  background-color: rgba(0, 0, 0, 0.2509803922);
+}
+.body-container h1.mobile-desc {
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 0.5rem;
+  margin-top: -5vh;
+}
 .body-container h2 {
   font-family: "TTCommons";
   font-weight: 500;
-  font-size: 100px;
+  font-size: 42px;
   color: #FFFFFF;
+}
+@media (min-width: 1200px) {
+  .body-container h2 {
+    font-size: 100px;
+  }
+}
+.body-container h2.questions {
+  font-size: 36px !important;
 }
 .body-container h3 {
   font-family: "Destina";
@@ -101,7 +126,7 @@ html, body, head {
 .body-container p {
   font-family: "TTCommons";
   font-weight: 300;
-  font-size: 54px;
+  font-size: 24px;
   line-height: 1.3em;
   color: #FFFFFF;
 }
@@ -110,36 +135,90 @@ html, body, head {
     font-size: clamp(42px, 2.2vw, 72px);
   }
 }
-.body-container p.contact-section, .body-container p.document-name, .body-container p.flat-parameter {
+.body-container p.photo-sign {
+  text-align: center;
+  font-size: 20px;
+  margin-top: -2vh;
+}
+.body-container p.contact-section {
   font-family: "TTCommons";
   font-weight: 500 !important;
-  font-size: 54px;
+  font-size: 28px;
   color: #FFFFFF;
   margin-bottom: 0;
 }
 @media (min-width: 1200px) {
-  .body-container p.contact-section, .body-container p.document-name, .body-container p.flat-parameter {
+  .body-container p.contact-section {
     font-size: clamp(42px, 2.2vw, 72px);
   }
 }
-.body-container p.contact-info, .body-container p.document-desc, .body-container p.flat-smaller {
+.body-container p.flat-parameter {
+  font-family: "TTCommons";
+  font-weight: 500 !important;
+  font-size: 23px;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+@media (min-width: 1200px) {
+  .body-container p.flat-parameter {
+    font-size: clamp(42px, 2.2vw, 72px);
+  }
+}
+.body-container p.document-name {
+  font-family: "TTCommons";
+  font-weight: 500 !important;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+@media (min-width: 1200px) {
+  .body-container p.document-name {
+    font-size: clamp(42px, 2.2vw, 72px);
+  }
+}
+.body-container p.contact-info {
   font-family: "TTCommons";
   font-weight: 300;
-  font-size: 34px;
+  font-size: 24px;
   line-height: 1em !important;
   color: #FFFFFF;
 }
 @media (min-width: 1200px) {
-  .body-container p.contact-info, .body-container p.document-desc, .body-container p.flat-smaller {
+  .body-container p.contact-info {
+    font-size: clamp(24px, 1.25vw, 48px);
+  }
+}
+.body-container p.flat-smaller {
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1em !important;
+  color: #FFFFFF;
+}
+@media (min-width: 1200px) {
+  .body-container p.flat-smaller {
+    font-size: clamp(24px, 1.25vw, 48px);
+  }
+}
+.body-container p.document-desc {
+  font-family: "TTCommons";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1em !important;
+  color: #FFFFFF;
+}
+@media (min-width: 1200px) {
+  .body-container p.document-desc {
     font-size: clamp(24px, 1.25vw, 48px);
   }
 }
 .body-container p.flat-info {
   font-family: "TTCommons";
   font-weight: 300;
-  font-size: 56px;
-  line-height: 1em !important;
+  font-size: 20px;
+  text-align: end;
   color: #FFFFFF;
+  line-height: 0;
 }
 @media (min-width: 1200px) {
   .body-container p.flat-info {
@@ -154,13 +233,37 @@ html, body, head {
 .body-container img.flat-image {
   filter: invert(1);
 }
+@media (min-width: 1200px) {
+  .body-container img.flat-image {
+    width: 70%;
+    height: 70%;
+  }
+}
+.body-container img.flat-preview {
+  filter: invert(1);
+}
+@media (min-width: 1200px) {
+  .body-container img.flat-preview {
+    width: 40%;
+    height: 40%;
+  }
+}
 .body-container img.document-save {
   width: 100%;
+  filter: invert(1);
+}
+.body-container img.domrf {
+  width: 200%;
+}
+@media (min-width: 1200px) {
+  .body-container img.domrf {
+    width: 40px;
+  }
 }
 .body-container .contact-form label {
   font-family: "TTCommons";
   font-weight: 300;
-  font-size: 54px;
+  font-size: 24px;
   line-height: 1.3em;
   color: #FFFFFF;
 }
@@ -170,37 +273,6 @@ html, body, head {
   }
 }
 .body-container .contact-form .form-control {
-  background-color: #363636;
-  font-family: "TTCommons";
-  font-weight: 300;
-  font-size: 54px;
-  line-height: 1.3em;
-  color: #FFFFFF;
-}
-@media (min-width: 1200px) {
-  .body-container .contact-form .form-control {
-    font-size: clamp(42px, 2.2vw, 72px);
-  }
-}
-.body-container .contact-form .form-control:focus {
-  outline: none !important;
-  box-shadow: 0 0 0 0.2rem rgba(219, 174, 106, 0.6666666667) !important;
-}
-.body-container .row {
-  background-color: transparent !important;
-}
-.body-container .row .text-container, .body-container .row .map-container, .body-container .row .flat-title {
-  padding: 40px;
-}
-.body-container .row .text-container .return, .body-container .row .map-container .return, .body-container .row .flat-title .return {
-  width: 10vw;
-}
-@media (min-width: 1200px) {
-  .body-container .row .text-container .return, .body-container .row .map-container .return, .body-container .row .flat-title .return {
-    width: 3vw;
-  }
-}
-.body-container .row .price {
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 45px;
@@ -211,30 +283,81 @@ html, body, head {
   color: #FFFFFF;
   font-family: "TTCommons";
   font-weight: 300;
-  font-size: 54px;
+  font-size: 24px;
   padding: 10px;
-  width: 250px;
   transition: border-color 0.2s ease, color 0.2s ease;
   transition: background-color 0.2s ease, color 0.2s ease;
+  line-height: 1.3em;
+  color: #FFFFFF;
 }
 @media (min-width: 1200px) {
-  .body-container .row .price {
+  .body-container .contact-form .form-control {
     font-size: clamp(28px, 1.5vw, 28px);
   }
 }
-.body-container .row .price:hover {
+.body-container .contact-form .form-control:hover {
   border-color: #dbae6a;
 }
-.body-container .row .price:active {
+.body-container .contact-form .form-control:focus {
   border-color: #dbae6a;
+  outline: none !important;
+}
+.body-container .contact-form .form-control::-moz-placeholder {
+  color: #575757;
+}
+.body-container .contact-form .form-control::placeholder {
+  color: #575757;
+}
+.body-container .contact-form .form-control:hover {
+  border-color: #dbae6a;
+}
+.body-container .contact-form .form-control:focus {
+  border-color: transparent;
+  outline: none !important;
+  box-shadow: 0 0 0 0.2rem rgba(219, 174, 106, 0.6666666667) !important;
+}
+.body-container .row {
+  background-color: transparent !important;
+}
+.body-container .row .text-container, .body-container .row .map-container, .body-container .row .flat-title {
+  padding: 20px;
+}
+@media (min-width: 1200px) {
+  .body-container .row .text-container, .body-container .row .map-container, .body-container .row .flat-title {
+    padding: 40px;
+  }
+}
+.body-container .row .text-container .return, .body-container .row .map-container .return, .body-container .row .flat-title .return {
+  width: 10vw;
+}
+@media (min-width: 1200px) {
+  .body-container .row .text-container .return, .body-container .row .map-container .return, .body-container .row .flat-title .return {
+    width: 3vw;
+  }
+}
+.body-container .row .image-container {
+  padding: 0px;
+}
+@media (min-width: 1200px) {
+  .body-container .row .image-container {
+    padding: 40px;
+  }
 }
 .body-container .row .filters-row {
-  height: 55px !important;
+  height: 45px !important;
+  margin-bottom: 30px;
+}
+@media (min-width: 1200px) {
+  .body-container .row .filters-row {
+    height: 55px !important;
+    margin-bottom: 0px;
+  }
 }
 .body-container .row .filters-row p {
   font-family: "TTCommons";
   font-weight: 300;
-  font-size: 54px;
+  font-size: 26px;
+  line-height: 3.5rem;
 }
 @media (min-width: 1200px) {
   .body-container .row .filters-row p {
@@ -252,41 +375,31 @@ html, body, head {
   border-style: solid;
   color: white;
   background-color: #181818;
+  color: #FFFFFF;
   font-family: "TTCommons";
   font-weight: 300;
-  font-size: 54px;
+  font-size: 26px;
+  height: 55px;
+  width: 200px;
   padding: 10px;
-  width: 250px;
   transition: border-color 0.2s ease, color 0.2s ease;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 @media (min-width: 1200px) {
   .body-container .row .filters-row .price {
     font-size: clamp(28px, 1.5vw, 28px);
+    width: 250px;
   }
 }
 .body-container .row .filters-row .price:hover {
   border-color: #dbae6a;
 }
-.body-container .row .filters-row .price:active {
+.body-container .row .filters-row .price:focus {
   border-color: #dbae6a;
+  outline: none !important;
 }
-.body-container .row .dom-approved {
-  background-color: #e1f6d9 !important;
-  border-radius: 10px;
-  width: 27vw;
-}
-.body-container .row .dom-approved p {
-  color: black !important;
-  font-family: "TTCommons";
-  font-weight: 500 !important;
-  font-size: clamp(18px, 2vw, 32px) !important;
-  line-height: 1em;
-  color: #FFFFFF;
-}
-.body-container .row .dom-approved .domlogo {
-  background-color: #97c355;
-  border-radius: 5px;
+.body-container .row .filters-row .price-mobile {
+  width: 200px;
 }
 .body-container .row .document-main {
   background-color: #252525 !important;
@@ -298,33 +411,53 @@ html, body, head {
   width: 3vw;
 }
 .body-container .btn-rooms {
+  text-decoration: none;
   background-color: transparent;
   border-style: solid;
   color: white;
   font-family: "TTCommons";
   font-weight: 300;
-  font-size: 54px;
+  font-size: 17px;
+  text-align: center;
+  padding: 10px;
+  width: 250px;
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 45px;
   border-color: white;
   color: #FFFFFF;
-  padding: 10px;
-  width: 150px;
   transition: border-color 0.2s ease, color 0.2s ease;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 @media (min-width: 1200px) {
   .body-container .btn-rooms {
     font-size: clamp(20px, 1.5vw, 20px);
+    padding: 10px;
+    width: 150px;
   }
 }
 .body-container .btn-rooms.more {
   width: 220px;
 }
+.body-container .btn-rooms.action {
+  font-size: 18px;
+  width: 200px;
+}
+@media (min-width: 1200px) {
+  .body-container .btn-rooms.action {
+    font-size: clamp(20px, 1.5vw, 20px);
+    padding: 10px;
+    width: 150px;
+  }
+}
 .body-container .btn-rooms.circle {
-  width: 55px;
+  width: 70px;
   border-radius: 100%;
+}
+@media (min-width: 1200px) {
+  .body-container .btn-rooms.circle {
+    width: 55px;
+  }
 }
 .body-container .btn-rooms:hover {
   border-color: #dbae6a;
@@ -352,17 +485,22 @@ html, body, head {
 }
 .body-container .flat-card h1 {
   font-family: "TTCommons" !important;
-  font-size: clamp(36px, 2vw, 28px) !important;
+  font-size: 24px;
   font-weight: 500;
   color: white;
   letter-spacing: 0.02vw;
   margin-top: 0;
 }
+@media (min-width: 1200px) {
+  .body-container .flat-card h1 {
+    font-size: clamp(36px, 2vw, 28px);
+  }
+}
 .body-container .flat-card p {
   margin-top: -10px;
   font-family: "TTCommons";
   font-weight: 300;
-  font-size: 54px;
+  font-size: 24px;
   line-height: 1.3em;
   color: #FFFFFF;
 }
@@ -398,13 +536,18 @@ html, body, head {
 }
 
 .footer-container {
-  background-color: #252525 !important;
+  background-color: #252525;
 }
 .footer-container h1 {
   font-family: "TTCommons" !important;
-  font-size: clamp(16px, 2vw, 28px) !important;
+  font-size: 26px;
   font-weight: 500;
   color: white;
+}
+@media (min-width: 1200px) {
+  .footer-container h1 {
+    font-size: clamp(16px, 2vw, 28px);
+  }
 }
 .footer-container p {
   font-family: "TikTok-Sans" !important;
@@ -417,6 +560,9 @@ html, body, head {
   font-size: clamp(16px, 2vw, 16px) !important;
   font-weight: 500;
   color: white;
+}
+.footer-container .socials {
+  filter: invert(1);
 }
 
 .btn-primary {
