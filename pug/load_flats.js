@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <h1 class="mt-4">${rooms}, ${flat.Area} м<sup>2</sup></h1>
         <h1>${totalPrice}₽</h1>
         <p>или ${meterPrice} за м<sup>2</sup></p>
-        <img class="flat-image flat-icon mt-3 mb-3" src="../assets/plans/${flat.Rooms}-${flat.Image}.png" alt="План квартиры" />
+        <img class="flat-preview flat-icon mt-3 mb-3" src="../assets/plans/${flat.Rooms}-${flat.Image}.png" alt="План квартиры" />
         <p class="mt-5">Корпус ${flat.Section}, этаж ${flat.Floor} из ${flat.FloorMax}</p>
         <p>Квартира №${flat.Number}</p>
         <div class="row d-flex justify-content-center">
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+        btn.addEventListener('click', () => {
         const rooms = parseInt(btn.getAttribute('flat-rooms'), 10);
         if(selectedRooms==rooms){
             selectedRooms = null;
